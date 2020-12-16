@@ -15,7 +15,10 @@ fun main() {
         repeat(7) {print("`-_,-'")}
 
         print("\n\nDo you have 2 players? (Y/N): ")
-        val playersConfirmation = readLine()?.toUpperCase()?.ifBlank { null }
+        var playersConfirmation = readLine()?.toUpperCase()?.ifBlank { null }
+        if (playersConfirmation != "Y" && playersConfirmation != "N") {
+            playersConfirmation = null
+        }
         if(playersConfirmation in arrayOf("N",null)) println("Playing with computer....")
 
         /**
