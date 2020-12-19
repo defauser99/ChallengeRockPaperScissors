@@ -8,13 +8,14 @@ fun main() {
     println("\n  Welcome to Rock, Paper, Scissors Game!")
     println("     Created by Defa Ihsan Ramadhan")
     repeat(7) {print("`-_,-'")}
+    println("")
 
     /**
      * Condition below will let player to make round game.
      * Game round will be looped as long as player choose to replay.
      */
     do {
-        print("\n\nDo you have 2 players? (Y/N): ")
+        print("\nDo you have 2 players? (Y/N): ")
         var playersConfirmation = readLine()?.toUpperCase()?.ifBlank { null }
         if (playersConfirmation != "Y" && playersConfirmation != "N") {
             playersConfirmation = null
